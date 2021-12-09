@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+
+<div class="container">
+  <br>
+ <form action="/cars/save" method="post">
+    <input type="hidden" name="_id" value="<%= car._id?car._id:'' %>">
+    <div class="form-group">
+      <label for="anio">Año:</label>
+      <input type="anio" class="form-control" id="anio" name="anio" value="<%= car.anio?car.anio:'' %>" >
+    </div>
+    <div class="form-group">
+      <label for="fabricante">Fabricante:</label>
+      <input type="fabricante" class="form-control" id="fabricante" name="fabricante" value="<%= car.fabricante?car.fabricante:'' %>" >
+    </div>
+    <div class="form-group">
+      <label for="Kilometraje">Kilometraje:</label>
+      <input type="Kilometraje" class="form-control" id="Kilometraje" name="Kilometraje" value="<%= car.Kilometraje?car.Kilometraje:'' %>" >
+    </div>
+    <div class="form-group">
+      <label for="color">Color:</label>
+      <input type="text" class="form-control" id="color" name="color" value="<%= car.color?car.color:'' %>" >
+    </div>
+    <button type="submit" class="btn btn-primary">Aceptar</button>
+    <a href="/cars" class="btn btn-danger">Cancelar</a>
+ </form>
+    
+</div>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

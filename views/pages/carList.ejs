@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+
+<div class="row">
+  <br>
+  <a href="/cars/new" class="btn btn-primary">Nuevo</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Año</th>
+        <th>Fabricante</th>
+        <th>Kilometraje</th>
+        <th>Color</th>
+        <th colspan="2">actions</th>
+      </tr>
+    </thead>
+    <% cars.forEach(function(car){ %>
+        <tr>
+          <td><%= car.anio %></td>
+          <td><%= car.fabricante %></td>
+          <td><%= car.Kilometraje %></td>
+          <td><%= car.color %></td>
+          <td><a href="/cars/edit/<%= car._id %>">Modificar</a></td>
+          <td><a href="/cars/delete/<%= car._id %>">Eliminar</a></td>
+        </tr>
+      <% }); %>
+  </table>
+    
+</div>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
