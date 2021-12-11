@@ -8,6 +8,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var carsRouter = require('./routes/cars-routes');
 
+//KOR
+require("dotenv").config();
+
 var app = express();
 
 // view engine setup

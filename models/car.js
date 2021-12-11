@@ -8,7 +8,7 @@ let carSchema = new Schema({
     fabricante: { type: String},
     Kilometraje: { type: String},
     color: { type: String}
-});
+}, {collection: 'cars'});
 
 let Car = mongoose.model('Cars', carSchema);
 
