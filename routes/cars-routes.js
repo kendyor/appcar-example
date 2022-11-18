@@ -7,13 +7,6 @@ let Car = require("../models/car");
 
 /* GET cars listing. */
 router.get('/', function(req, res, next) {
-    // Car.find((err, cars) => {
-    //     console.log(cars);
-        
-    //     if(err) throw err;
-
-    //     res.render('pages/carList', {cars: cars});        
-    // });
     Car.find()
     .then((data) => res.render('pages/carList', {cars: data}) )
     .catch((error) => res.json({message: error}));
